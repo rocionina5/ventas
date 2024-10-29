@@ -1,0 +1,65 @@
+[
+    {
+        "modelo":"SAMSUNG",
+        "sistema":"Android",
+        "precio":2000,
+        "imagen":"imagen/samsung.jpg",
+        "enlace":"paginas/paginauno.html"
+    },
+    {
+        
+        "modelo":"APPLE",
+        "sistema":"Android",
+        "precio":1500,
+        "imagen":"imagen/apple.jpg",
+         "enlace":"paginas/paginados.html"
+    },
+    {
+        
+        "modelo":"RETMI",
+        "sistema":"Android",
+        "precio":1800,
+        "imagen":"imagen/redmi.jpg",
+         "enlace":"paginas/paginatres.html"
+    },
+    {
+        
+        "modelo":"OPPO",
+        "sistema":"Android",
+        "precio":1200,
+        "imagen":"imagen/oppo.jpg",
+         "enlace":"paginas/paginacuatro.html"
+    },
+    {
+        "modelo":"MOTOROLA",
+        "sistema":"Android",
+        "precio":2200,
+        "imagen":"imagen/motorola.jpg",
+         "enlace":"paginas/paginacinco.html"
+    },
+    {
+        
+        "modelo":"HUAWEI",
+        "sistema":"Android",
+        "precio":1000,
+        "imagen":"imagen/huawei.jpg",
+         "enlace":"paginas/paginaseis.html"
+    },
+    {
+       
+        "modelo":"REALME",
+        "sistema":"Android",
+        
+        "precio":2500,
+        "imagen":"imagen/realme.jpg",
+         "enlace":"paginas/paginasiete.html"
+    },
+    {
+       
+        "modelo":"HONOR",
+        "sistema":"Android",
+        "precio":1800,
+        "imagen":"imagen/honor.jpg",
+        "enlace":"paginas/paginaocho.html"
+    }
+]

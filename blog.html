@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/pajinas/paginauno.html">
+    <link rel="stylesheet" href="css/skeleton.css">
+    
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        .caja:hover {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .caja {
+            width: 250px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 0;
+
+        }
+        .caja img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a class="navbar-brand" href="#"><img src="imagen/diseno-logotipo-tienda-movil-degradado_23-2149688666.avif" height="35px" alt="logo"></a>
+        <h1>Mobile Store</h1> <br><br>
+        <nav>
+            <ul>
+                <center>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="compras.html">Compras</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="faq.html">Preguntas</a></li>
+				<li><a href="servicios.html">Servicios</a></li>
+				<li><a href="equipo.html">Equipo</a></li>
+                </center>
+				
+            </ul>
+        </nav>
+    </header>
+    <style>
+       
+        .autos{
+            border-style: outset;
+            width: 100%;
+            height: 38rem;
+            padding: 1px;
+            margin: 0;
+            background-color: cadetblue;
+            background-attachment: fixed; 
+
+        }
+        .boton-verde{
+            width: 3rem;
+            background-color: greenyellow;
+            border-style: ridge;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 10%;
+        }
+        .principal{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            row-gap: 10rem;
+            column-gap: 10rem;
+            padding: 2rem;
+            margin: 2rem;
+     
+  }
+        
+        .autitos{
+            display: grid;
+            margin: auto;
+            place-items: center;
+        }
+        p{
+            font-family: monospace;
+            font-size: smaller;
+        }
+        img{
+            width: 18rem;
+            height: 16rem;
+            border: ridge;
+        }
+        
+        h3{
+            font-size: 3rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            text-align: center;
+        }
+        .datos{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5rem;
+        }
+
+
+
+    </style>
+    <style>
+    
+        h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(241, 177, 225);
+            font-size: 13rem;
+        }
+      h2{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 7rem;
+        
+        color: darkviolet;
+        }
+        p{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 2rem;
+    
+        }
+    
+    </style>
+
+
+    <center>
+    <h2>NUEVOS ARTICULOS</h2>
+    <h2>CELULARES</h2>
+    </center>
+    <main class="principal">
+
+    </main>
+    <script>
+        const getCarros= async ()=>{
+            const responde = await fetch("cars.json")
+            const data = await responde.json();
+            let out='<div class="principal">'
+            data.forEach((productos) => {
+
+                const tabla1 = document.querySelector('.autitos .datos')
+                out+= `
+                    <div class= "autos"><div class="autitos"><h3>${productos.modelo}</h3>
+                    <img src="${productos.imagen}">
+                    <div class= "datos"><p>Sistema:${productos.sistema}</p>
+                    <p>Precio:${productos.precio}</p>
+                    <p><a href="${productos.enlace}" class="boton boton-verde">Ver productos</a></p>
+                    </div></div></div>
+                     `
+            })
+                        document.querySelector('.principal').innerHTML=out}
+            getCarros()
+    </script>
+    <script src="cars.json"></script>
+    <script src="/pajinas/paginauno.html"></script>
+    
+   
+</body>
+</html>
